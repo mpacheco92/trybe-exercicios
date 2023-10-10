@@ -1,1 +1,3 @@
-# trybe-exercicios
+# Repositório de exercícios TRYBE
+
+ESTE REPOSITÓRIO CONTÉM OS EXERCÍCIOS QUE EU FIZ ENQUANTO ESTUDAVA NA TRYBE. 
