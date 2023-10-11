@@ -1,4 +1,3 @@
 # MEU REPOSITÓRIO DE EXERCÍCIOS
-# Repositório de exercícios TRYBE
 
-ESTE REPOSITÓRIO CONTÉM OS EXERCÍCIOS QUE EU FIZ ENQUANTO ESTUDAVA NA TRYBE. 
+Este repositório contém todas as atividades de aprendizagem desenvolvidas por mim _(https://www.linkedin.com/in/mylherpacheco)_ enquanto estudava na [Trybe](https://www.betrybe.com/) 🚀
