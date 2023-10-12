@@ -1,0 +1,264 @@
+//Manipulação e busca//
+
+Parte I
+De olho na dica 👀: Crie um novo diretório chamado unix_tests_search e navegue até ele.
+
+Na pasta unix_tests_search, baixe um arquivo com os nomes de todos os países do mundo utilizando o comando curl. Conheça mais sobre esse comando nesse link.
+
+mkdir unix_tests_search
+cd unix_tests_search
+curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
+Mostre todo o conteúdo do arquivo countries.txt na tela.
+Mostre o conteúdo de countries.txt, página por página, até encontrar a Zambia.
+Mostre novamente o conteúdo de countries.txt página por página, mas agora utilize um comando para buscar por Zambia.
+Busque por Brazil no countries.txt.
+Busque novamente por brazil, mas agora utilize o lower case e não considere letras maiúsculas ou minúsculas.
+Parte II
+De olho na dica 👀: Crie um novo arquivo chamado phrases.txt e adicione algumas frases à sua escolha. Não é necessário criar o arquivo pelo terminal.
+
+Busque pelas frases que não contenham a palavra fox.
+Conte o número de palavras do arquivo phrases.txt.
+Conte o número de linhas do arquivo phrases.txt.
+Parte III
+De olho na dica 👀: Para contar o número de caracteres de um arquivo, não use wc -c, e sim wc -m.
+
+Crie os arquivos empty.tbt e empty.pdf.
+Liste todos os arquivos do diretório unix_tests_search.
+Liste todos os arquivos que terminem com txt.
+Liste todos os arquivos que terminem com tbt ou txt.
+Acesse o manual do comando ls.
+
+------------------------------------------
+
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell$ mkdir unix_tests_search
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell$ cd unix_tests
+unix_tests/        unix_tests_search/ 
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell$ cd unix_tests_search/
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ curl -o countries.txt 'https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1842  100  1842    0     0   2313      0 --:--:-- --:--:-- --:--:--  2314
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ ls
+countries.txt
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ cat countries.txt
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russian Federation
+Rwanda
+St Kitts & Nevis
+St Lucia
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwepacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ less countries.txt
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ grep Brazil countries.txt
+Brazil
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ grep -i brazil countries.txt
+Brazil
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ touch phrases.txt
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ cat > phrases.txt
+estou com fome
+estou com sede
+estou com sono
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ grep -v fox phrases.txt
+estou com fome
+estou com sede
+estou com sono
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ wc -w phrases.txt
+9 phrases.txt
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ wc -l phrases.txt
+3 phrases.txt
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ touch empty.tbt empty.pdf
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ ls
+countries.txt  empty.pdf  empty.tbt  phrases.txt
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ ls *.txt
+countries.txt  phrases.txt
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ ls *.t?t
+countries.txt  empty.tbt  phrases.txt
+pacheco@PACHECO:~/trybe/trybe-exercicios/fundamentos/secao-1-unix-shell-e-git/dia-1-unix-e-shell/unix_tests_search$ man ls
