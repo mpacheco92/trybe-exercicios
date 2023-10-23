@@ -108,8 +108,6 @@ switch (peça.toLowerCase()) {
         console.log('Peça inválida!');
 }
 
-console.log(peça);
-
 ////////////////////////////////////////////
 
 // 🚀 Exercício 6: Há um par entre nós
