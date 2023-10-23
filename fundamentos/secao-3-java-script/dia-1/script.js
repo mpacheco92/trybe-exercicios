@@ -61,8 +61,8 @@ let angulo1 = -50;
 let angulo2 = 150;
 let angulo3 = 80;
 
-if (angulo1 > 0 && angulo2 > 0 && angulo3 > 0){
-    if (angulo1 + angulo2 + angulo3 === 180){
+if (angulo1 > 0 && angulo2 > 0 && angulo3 > 0) {
+    if (angulo1 + angulo2 + angulo3 === 180) {
         console.log(true);
     } else {
         console.log(false);
@@ -83,6 +83,33 @@ if (angulo1 > 0 && angulo2 > 0 && angulo3 > 0){
 
 // Exemplo: Bispo -> Diagonais.
 
+let peça = 'Bispo'
+
+switch (peça.toLowerCase()) {
+    case 'peão':
+        console.log('Peão - move-se sempre para frente, uma casa por vez.');
+        break;
+    case 'cavalo':
+        console.log('Cavalo - move-se duas casas na horizontal ou na vertical e depois uma para o lado.');
+        break;
+    case 'bispo':
+        console.log('Bispo - movimenta-se em diagonais.');
+        break;
+    case 'torre':
+        console.log('Torre - move-se em linhas horizontais ou verticais.');
+        break;
+    case 'rainha':
+        console.log('Rainha - move-se quantas casas desejar nas retas horizontais, verticais e diagonais.');
+        break;
+    case 'rei':
+        console.log('Rei - move-se uma casa por vez em qualquer direção ou sentido.');
+        break;
+    default:
+        console.log('Peça inválida!');
+}
+
+console.log(peça);
+
 ////////////////////////////////////////////
 
 // 🚀 Exercício 6: Há um par entre nós
@@ -95,7 +122,7 @@ let opcao3 = 3;
 
 let par = false;
 
-if (opcao1 % 2 === 0 || opcao2 % 2 === 0 || opcao3 % 2 === 0){
+if (opcao1 % 2 === 0 || opcao2 % 2 === 0 || opcao3 % 2 === 0) {
     par = true;
 }
 
@@ -145,9 +172,9 @@ let salarioBruto = 2500
 let aliquotaInss;
 let impostoRenda;
 
-if (salarioBruto <= 1556.94){
+if (salarioBruto <= 1556.94) {
     aliquotaInss = salarioBruto * 0.08;
-} else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92){
+} else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
     aliquotaInss = salarioBruto * 0.09;
 } else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
     aliquotaInss = salarioBruto * 0.11;
@@ -157,13 +184,13 @@ if (salarioBruto <= 1556.94){
 
 let salarioBase = salarioBruto - aliquotaInss;
 
-if (salarioBruto <= 1903.98){
+if (salarioBruto <= 1903.98) {
     impostoRenda = 0;
-} else if (salarioBase >= 1903.99 && salarioBase <= 2826.65){
+} else if (salarioBase >= 1903.99 && salarioBase <= 2826.65) {
     impostoRenda = salarioBase * 0.075 - 142.80;
-} else if (salarioBase >= 2826.66 && salarioBase <= 3751.05){
-    impostoRenda = salarioBase * 0,15 - 354.80;
-} else if (salarioBase >= 3751.06 && salarioBase <= 4664.68){
+} else if (salarioBase >= 2826.66 && salarioBase <= 3751.05) {
+    impostoRenda = salarioBase * 0, 15 - 354.80;
+} else if (salarioBase >= 3751.06 && salarioBase <= 4664.68) {
     impostoRenda = salarioBase * 0.225 - 636.13;
 } else {
     impostoRenda = salarioBase * 0.275 - 869.36;
