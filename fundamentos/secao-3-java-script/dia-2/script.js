@@ -70,3 +70,67 @@ if (qtdNumImpar === 0){
 }
 
 console.log(qtdNumImpar);
+
+
+// Desafio fatorial
+// O fatorial é a multiplicação de um número natural pelos seus antecessores, exceto o zero. Por exemplo:
+
+// O fatorial é representado pelo sinal !
+// Exemplo de 4 fatorial:
+// 4! = 4 x 3 x 2 x 1 = 24
+
+// Com base nessas informações, crie um algoritmo que imprima na tela o fatorial de 10.
+
+let numFatorial = 1;
+
+for (let index = 10; index > 0; index -=1){
+    numFatorial *= index
+}
+
+console.log(numFatorial);
+
+
+// Desafio de inverter palavra
+// Utilize a estrutura de repetição for para desenvolver um algoritmo que seja capaz de inverter uma palavra, como a palavra “banana” para “ananab”. Utilize a string abaixo como exemplo. Depois, troque-a por outras para verificar se seu algoritmo está funcionando corretamente.
+
+// De olho na dica 👀: Pesquise sobre os seguintes métodos: split(), reverse() e join();
+
+let word = 'tryber';
+let palavraContraria = '';
+
+for (let index = word.length - 1; index >= 0; index -= 1){
+    palavraContraria += word[index];
+}
+
+console.log(palavraContraria);
+
+
+// Escreva um algoritmo que, dado um valor n, sendo n > 1, imprima na tela um quadrado feito de asteriscos de tamanho n.
+
+let n = 6;
+let caracter = '*';
+let linha = '';
+
+for (let index = 0; index < n; index += 1){
+    linha = linha + caracter;
+}
+
+for (let index = 0; index < n; index += 1){
+    console.log(linha);
+}
+
+
+// Desafio da pirâmide de asteriscos
+// Faça o mesmo algoritmo que antes, mas de modo que imprima um triângulo retângulo com 5 asteriscos de base.
+
+let num = 5;
+let simbolo = '*';
+let horizontal = '';
+
+for (let index = 0; index < num; index += 1){
+    horizontal = horizontal + simbolo;
+    console.log(horizontal);
+}
+
+// Desafio dos asteriscos, parte 2
+// Agora, inverta o lado do triângulo.
