@@ -163,3 +163,14 @@ console.log(GetSomaAlunos(school.lessons));
 
 
 // Crie uma função que verifica se uma determinada chave existe em todos os elementos do array lessons. O retorno deve ser um booleano (true ou false). Essa função deve possuir dois parâmetros: o objeto e o nome da chave.
+
+const verificaChave = (objeto, nomeChave) => {
+  for (let index = 0; index < objeto.lessons.length; index += 1) {
+      if (objeto.lessons[index][nomeChave] === undefined) {
+          return false;
+      }
+  } return true;
+}
+
+
+console.log(verificaChave(school, 'aluno'));
