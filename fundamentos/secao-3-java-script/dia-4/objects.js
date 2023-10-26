@@ -172,5 +172,24 @@ const verificaChave = (objeto, nomeChave) => {
   } return true;
 }
 
-
 console.log(verificaChave(school, 'aluno'));
+
+
+
+// Crie uma função para alterar o turno para noite no curso de Python. Essa função deve ter três parâmetros: a base de dados a ser modificada, o nome do curso e o novo valor da chave.
+
+// 1 - achar o objeto que contem Python com o for
+// 2 - achar a chave 'shift' dentro da objeto que contem Python
+// 3 - passar o valor noite para shift
+
+const changeShift = (objeto, courseName, newValue) => {
+  let newShift;
+  for (let index = 0; index < objeto.length; index += 1){
+    if (objeto[index].course === courseName){
+      newShift = objeto[index];
+      newShift.shift = newValue;
+    }
+  } return newShift;
+};
+
+console.log(changeShift(school.lessons, 'Python', 'Noite'));
