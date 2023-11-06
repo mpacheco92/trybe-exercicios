@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: green;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        // Adicione a tag h1 com o texto TrybeTrip - Agência de Viagens como filho da tag body;
+    let title = document.createElement('h1');
+    title.className = 'title';
+    title.innerText = 'TrybeTrip - Agência de Viagens';
+    document.body.appendChild(title);
+
+    // Adicione a tag main com a classe main-content como filho da tag body;
+    let main = document.createElement('main');
+    main.className = 'main-content';
+    document.body.appendChild(main);
+
+    // Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+    let sectionOne = document.createElement('section');
+    sectionOne.className = 'center-content';
+    main.appendChild(sectionOne);
+
+    // Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+    let paragOne = document.createElement('p');
+    sectionOne.appendChild(paragOne);
+
+    // Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+    let sectionTwo = document.createElement('section');
+    sectionTwo.className = 'left-content';
+    main.appendChild(sectionTwo);
+
+    // Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+    let sectionThree = document.createElement('section');
+    sectionThree.className = 'right-content';
+    main.appendChild(sectionThree);
+
+    // Adicione uma imagem com src configurado para valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+    let imgOne = document.createElement('img');
+    imgOne.src = 'https://picsum.photos/200';
+    sectionTwo.appendChild(imgOne);
+
+    // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, e assim por diante. Essa lista deve ser filha do section criado no passo 6;
+    let ulOne = document.createElement('ul');
+    ulOne.className = 'ulOne';
+    sectionThree.appendChild(ulOne);
+    let liArray = ['um','dois','três','quatro','cinco','seis','sete','oito','nove','dez'];
+    for (let i = 0; i < liArray.length; i += 1) {
+        let liOne = document.createElement('li');
+        liOne.innerText = liArray[i];
+        ulOne.appendChild(liOne);
+    }
+
+    // Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+    ulOne.lastChild.remove();
+    ulOne.lastChild.remove();
+
+    // Adicione 3 tags h3, todas filhas do main criado no passo 2.
+    for (let index = 0; index < 3; index += 1){
+        let h3 = document.createElement('h3');
+        h3.innerText = index;
+        h3.className = 'description';
+        main.appendChild(h3);
+    }
+
+    // Remova a section criada no passo 5 (aquela que possui a classe left-content) por meio da função .removeChild();
+    main.removeChild(sectionTwo);
+
+
+    </script>
+  </body>
+</html>
