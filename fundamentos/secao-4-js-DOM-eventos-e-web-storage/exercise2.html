@@ -1,0 +1,35 @@
+<main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+    <script>
+        // Crie um irmão para elementoOndeVoceEsta.
+        let newBrother = document.createElement('section');
+        let father = document.getElementById('pai');
+        newBrother.id = 'BrotherElementoOndeVoceEsta';
+        father.appendChild(newBrother);
+
+        // Crie um filho para elementoOndeVoceEsta.
+        let newChild = document.createElement('section');
+        let elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+        newChild.id = 'newChild';
+        elementoOndeVoceEsta.appendChild(newChild);
+
+        // Crie um filho para primeiroFilhoDoFilho.
+        let firstChild = document.createElement('section');
+        let primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+        firstChild.id = 'firstChild';
+        primeiroFilhoDoFilho.appendChild(firstChild);
+
+        // A partir desse filho criado, acesse terceiroFilho.
+        firstChild.parentElement.parentElement.nextElementSibling;
+
+    </script>
+  </main>
