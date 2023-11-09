@@ -80,3 +80,22 @@ firstLi.addEventListener('dblclick', resetText);
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
 // event.target na função retornará o objeto 'firstLi'.
+
+localStorage.setItem('filme', 'Paaaacheco');
+let recuperaStringLocalStorage = localStorage.getItem('filme');
+console.log(recuperaStringLocalStorage);
+console.log(typeof recuperaStringLocalStorage);
+
+localStorage.setItem('number', 50);
+let recuperaNumberLocalStorage = JSON.parse(localStorage.getItem('number'));
+console.log(recuperaNumberLocalStorage);
+console.log(typeof recuperaNumberLocalStorage);
+
+const favoriteMovie = {
+  filme: 'O Poderoso Chefão',
+  filme2: 'Velozes e Furiosos'
+}
+localStorage.setItem('filme', JSON.stringify(favoriteMovie));
+// let recuperaFilme = JSON.parse(localStorage.getItem('filme'));
+// console.log(recuperaFilme);
+// console.log(typeof recuperaFilme);
