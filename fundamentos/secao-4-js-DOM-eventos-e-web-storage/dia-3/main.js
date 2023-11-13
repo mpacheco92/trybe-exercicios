@@ -23,8 +23,8 @@ const selectTech = (event) => {
 const addTech = () => {
   const techs = document.querySelectorAll('.container li');
   for (let index = 0; index < techs.length; index += 1){
-    const tech = techs[index];
-    tech.addEventListener('click', selectTech);
+    const tech = techs[index]
+    tech.addEventListener('click', selectTech)
   }; 
 };
 addTech();
