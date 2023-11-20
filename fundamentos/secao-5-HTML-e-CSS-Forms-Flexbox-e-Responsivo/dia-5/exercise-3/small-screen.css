@@ -1,0 +1,102 @@
+/*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+ html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+  
+  }
+  
+  article {
+  
+  }
+  
+  h1 {
+  
+  }
+  
+  h2 {
+  
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  main {
+  
+  }
+  
+  section {
+  
+  }
+  
+  figure {
+    margin: 0;
+  }
+  
+  figcaption {
+    font-size: .8em;
+  }
+
+  /* 1.1 – Execute as seguinte estilizações para todo o corpo da página
+Aumentar o tamanho da fonte;
+Diminuir o tamanho da fonte dos elementos h1 e h2; – Definir uma margem para esses elementos;
+Aumentar o espaçamento entre as figuras;
+Adicionar um pouco de margin na página. */
+
+* {
+    font-size: 20px;
+    margin: 5px;
+}
+
+h1, h2 {
+    font-size: 15px;
+    margin: 20px;
+}
+
+img {
+    margin: 20px 0;
+}
+
+/* 1.2 - Defina as propriedades css para os elementos
+Centralize os elementos article;
+Faça as imagens serem mostradas em mais de uma coluna. */
+
+article {
+    text-align: center;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+/* -Faça o primeiro breakpoint do layout para telas telas menores que 768px:
+
+Faça outro breakpoint para telas grandes, como desktops. Ao consultar a tabela com os tamanhos, percebemos que a largura mínima para essa dimensão seria de 992px:
+Crie uma nova media query no seu arquivo CSS usando a dimensão para telas de desktop, defina a largura minima como 992px;
+Altere a cor de fundo;
+Ajuste as margens da página;
+Adicione a propriedade max-width à página, para garantir que a largura das linhas não fiquem muito grande. */
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: orange;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-color: lightgreen;
+        margin: 0;
+        max-width: 100%;
+    }
+}

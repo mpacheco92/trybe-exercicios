@@ -1,0 +1,123 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* 1.1 – Crie três versões de layout diferentes para essa página
+Crie um layout para telas pequenas (até 600px);
+Crie um layout para telas médias (entre 601px e 1023px);
+Crie um layout para telas grandes (de 1024px para cima). */
+
+.container {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+} 
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    p {
+        line-height: 1.5em;
+    }
+
+    body {
+        background-color: lightblue;
+        margin: 10px;
+    }
+
+    .titulo {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .titulo,
+    .aside-one,
+    .aside-two {
+        text-align: center;
+    }
+
+    .aside-one ul,
+    .aside-two ul {
+        list-style-type: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    p {
+        line-height: 1.5em;
+    }
+
+    body {
+        background-color: lightgreen;
+        margin: 10px;
+        font-size: 25px;
+    }
+
+    .titulo {
+        text-align: center;
+    }
+
+    .aside-one ul,
+    .aside-two ul {
+        list-style-type: none;
+    }
+
+    .titulo {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 20px;
+        background-color: white;
+        margin: 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container > * {
+        margin: 10px;
+    }
+
+        .header {
+            margin: 0;
+        }
+
+    .menu {
+        background-color: black;
+        padding: 5px;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: white;
+        list-style-type: none;
+    }
+
+    .menu ul li {
+        border: 1px solid white;
+        padding: 5px 20px;
+        border-radius: 50px;
+    }
+}
