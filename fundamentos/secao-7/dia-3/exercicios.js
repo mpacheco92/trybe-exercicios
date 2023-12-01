@@ -19,3 +19,14 @@ countries.forEach((country) => {
   };
   currencyArray.push(currencyObj);
 });
+
+
+// Exercício 3
+// Escreva uma função chamada findCountry que recebe dois parâmetros: o array de países e o nome do país desejado. Ao receber esses valores, a função deve retornar o elemento do país desejado. Caso não seja encontrado, a função deve lançar um erro com a mensagem: “País não encontrado!”.
+
+const findCountry = (array, countryName) => {
+  const findCountry = array.find((country) => country.name === countryName);
+  if (findCountry) {
+    return findCountry;
+  } return 'País não encontrado!';
+};
