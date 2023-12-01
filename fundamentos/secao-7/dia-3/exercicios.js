@@ -30,3 +30,18 @@ const findCountry = (array, countryName) => {
     return findCountry;
   } return 'País não encontrado!';
 };
+
+
+// Exercício 4
+// Desenvolva uma função que crie uma cópia do array countries e adicione a Alemanha a esse novo array através do spread operator.
+
+const newCountry = {
+  name: 'Germany',
+  region: 'Europe',
+  currencies: [{ code: 'EUR', name: 'Euro' }],
+  capital: 'Berlin',
+  population: 83190556,
+  area: 357386
+};
+
+const addCountry = (array, obj) => [...array, obj];
