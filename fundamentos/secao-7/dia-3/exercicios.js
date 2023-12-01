@@ -45,3 +45,33 @@ const newCountry = {
 };
 
 const addCountry = (array, obj) => [...array, obj];
+
+
+// Exercício 5
+// Desenvolva uma solução para percorrer o array countries e construir uma string para cada país com informações e formatação específicas. As propriedades são passadas como argumentos para a função buildString e adicionadas à string final. A string deverá ser construída com as propriedades name, capital, currencies.code e currencies.name separadas por um -.
+
+//percorrer o array
+// fazer uma string contendo algumas informações de cada elemento
+
+// const buildString = (array, name) => {
+//   let string = '';
+//   for (let index = 0; index < array.length; index += 1) {
+//     if (array[index].name === name) {
+//       string = `${name} - ${array[index].region} - ${array[index].currencies[0].code} - ${array[index].currencies[0].name}`
+//     }
+//   }
+//   return string;
+// }
+
+const buildString = (array, name, ...arg) => {
+  const string = array.find((country) => country.name === name)
+  return `${string.name} - ${arg[0]} - ${arg[1]} - ${arg[2]}`
+}
+
+const addParam = () => {
+  countries.forEach((country) => {
+    console.log(buildString(countries, country.name, country.region, country.currencies[0].code, country.currencies[0].name));
+  })
+}
+
+addParam();
