@@ -57,6 +57,7 @@ const buildString = (array, name, ...arg) => {
   return string;
 }
 
+
 const addParam = () => {
   countries.forEach((country) => {
     console.log(buildString(countries, country.name, country.region, country.currencies[0].code, country.currencies[0].name));
@@ -64,18 +65,3 @@ const addParam = () => {
 }
 
 addParam();
-
-
-// const buildString = (array, name, ...arg) => {
-//   const string = array.find((country) => country.name === name)
-//   console.log(string);
-//   return `${string.name} - ${arg[0]} - ${arg[1]} - ${arg[2]}`
-// }
-
-// const addParam = () => {
-//   countries.forEach((country) => {
-//     console.log(buildString(countries, country.name, country.region, country.currencies[0].code, country.currencies[0].name));
-//   })
-// }
-
-// addParam();
