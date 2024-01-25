@@ -7,20 +7,31 @@ function App() {
   const [email, setEmail] = useState('');
   const [schooling, setSchooling] = useState('Médio');
   const [resume, setResume] = useState('');
+  const [term, setTerm] = useState(false);
+  const [erro, setErro] = useState(false);
+  const [empty, setEmpty] = useState(false);
 
   function resetForm(){
     setName('');
     setEmail('');
     setSchooling('Médio');
     setResume('');
+    setTerm(false);
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>){
     event.preventDefault();
-    alert(
-      `Nome: ${name}\nemail: ${email}\nEscolaridade: ${schooling}\nExperiências: ${resume}`
-    );
-    resetForm();
+    if(name !== '' && email !== '' && resume !== ''&& term) {
+      alert(
+        `Nome: ${name}\nemail: ${email}\nEscolaridade: ${schooling}\nExperiências: ${resume}`
+        );
+      resetForm();
+      setEmpty(false)
+      setErro(false)
+    } 
+    if(name === '' || email === '' || resume === '') setEmpty(true);
+  
+    if(!term) setErro(true);
   }
 
   return (
@@ -46,6 +57,17 @@ function App() {
         <textarea value={ resume } onChange={ ({target}) => setResume(target.value) } />
       </label>
       <button>Enviar</button>
+      <label>
+        Aceito os termos
+        <input type="checkbox" checked={ term } onChange={ () => setTerm((prevTerms) => !prevTerms) } />
+      </label>
+      {erro && (
+        <h4> Você precisa aceitar os termos e condições para poder enviar o
+        currículo</h4>
+      )}
+      {empty && (
+        <h4>Todos os campos são obrigatórios</h4>
+      )}
     </form>
   );
 }
